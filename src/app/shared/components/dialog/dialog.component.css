@@ -1,0 +1,66 @@
+.modal-backdrop.in {
+    opacity: 0.9;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  
+  .modal-title {
+    padding: .5rem 1rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .modal-body {
+    height: auto !important;
+    max-height: 70vh !important;
+    overflow-y: auto;
+    border-block: .5px solid lightgray !important;
+    background-color: #f4f4f4!important;
+  }
+  
+  .modal {
+    background-color: rgba(58, 51, 51, 0.5);
+    padding-top: 5px;
+  }
+  
+  .confirm-message {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 5px;
+  }
+  
+  .custom-modal {
+    background-color: whitesmoke;
+    margin-block: 5vh !important;
+    width: auto !important;
+    max-width: 80% !important;
+    margin-inline: auto !important;
+  }
+  
+  .close-modal-icon {
+    font-weight: bold;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  
+  .modal-footer {
+    padding-inline: 2rem !important;
+    padding-block: .5rem !important;
+    border: none !important;
+  }
+  
+  @media screen and (min-width: 1280px) {
+  
+    .custom-modal{
+      max-width: 1024px!important;
+    }
+  }
+  

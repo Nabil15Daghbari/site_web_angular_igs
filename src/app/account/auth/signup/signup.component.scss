@@ -1,0 +1,80 @@
+.account-pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Centrage vertical */
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 5px;
+}
+
+.error-messages {
+  margin-top: 5px;
+}
+
+.btn-primary {
+  border-radius: 5px;
+}
+
+.text-primary {
+  color: #007bff !important;
+}
+
+.text-danger {
+  color: #dc3545 !important;
+}
+
+.text-warning {
+  color: #ffc107 !important;
+}
+
+.danger-message-panel {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.success-message-panel {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.danger-icon, .success-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.danger-message, .success-message {
+  font-weight: bold;
+}
+
+.mt-5 {
+  margin-top: 25px !important;
+}
+
+.text-center {
+  text-align: center !important;
+}

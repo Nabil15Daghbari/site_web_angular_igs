@@ -1,0 +1,39 @@
+
+
+
+.full-width {
+    position: absolute; /* Position absolue pour que l'image occupe toute la section */
+    top: 0;
+    left: 0;
+    width: 100%; /* La largeur de l'image sera égale à la largeur de la section */
+    height: 100%; /* La hauteur de l'image sera égale à la hauteur de la section */
+    object-fit: cover; /* Remplir l'espace de manière proportionnée */
+} 
+
+.titre {
+    text-align: center; /* Centrer le texte horizontalement */
+    font-size: 2rem; /* Taille de police augmentée */
+    font-weight: bold; /* Poids de la police */
+    color: #ffffff; /* Couleur du texte en blanc */
+    margin-top: 50px; /* Espacement supérieur */
+    margin-bottom: 50px; /* Espacement inférieur */
+    position: relative; /* Position relative pour le conteneur du titre */
+}
+
+
+.img-bordered {
+    border-radius: 15px;
+    border: 1px solid #ddd; /* Couleur et épaisseur de la bordure */
+}
+
+
+.blog-box {
+    border: 2px solid #ccc; /* Couleur et épaisseur du contour */
+    border-radius: 10px; /* Rayon des coins du contour */
+    padding: 20px; /* Espace à l'intérieur du contour */
+    margin-bottom: 20px; /* Espace entre chaque div */
+}
+
+.row > div:nth-child(n+4) {
+    margin-top: 20px; /* Ajoute un espace entre la première et la deuxième ligne de div */
+}

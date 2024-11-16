@@ -1,0 +1,18 @@
+<div class="steps">
+    <div class="divider"></div>
+    <li class="step-container" *ngFor="let item of steps; let i = index">
+      <div class="step-item" (click)="selectStep(i)" [ngClass]="{
+        'active-step': activeStep(i),
+        'done-step': doneStep(i)
+      }" [attr.data-index]="i">
+        <span class="step-number">
+          <span *ngIf="doneStep(i)" class="zmdi zmdi-check step-icon"></span>
+          <span *ngIf="!doneStep(i)">
+            {{i + 1}}
+          </span>
+        </span>
+        <span class="step-title">{{item | translate}}</span>
+      </div>
+    </li>
+  </div>
+  

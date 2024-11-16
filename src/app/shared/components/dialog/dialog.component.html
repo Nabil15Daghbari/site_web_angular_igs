@@ -1,0 +1,37 @@
+<div *ngIf="content" class="modal" tabindex="-1" role="dialog" style="display:block!important">
+    <div  class="overlay"></div>
+    <div class="modal-dialog custom-modal" role="document">
+      <div class="modal-content">
+  
+        <div class="modal-title">
+          <h5 class="text-secondary">
+            {{content.title | translate}}
+          </h5>
+          <div class="d-flex justify-content-end px-2 pb-2">
+            <i [title]="'btns.close' | translate" (click)="content.cancel()" class="zmdi zmdi-close close-modal-icon"></i>
+          </div>
+        </div>
+  
+        <div class="modal-body">
+  
+          <div class="row">
+            <div class="col-md-12 p-3">
+              <ng-content></ng-content>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-end modal-footer">
+          <div class="d-flex align-items-center gap-4">
+            <button (click)="content.cancel()" class="btn btn-outline-secondary">
+              {{'btns.cancel' | translate}}
+            </button>
+            <button (click)="content.confirm()" class="btn btn-primary">
+              {{content.btnLabel | translate}}
+            </button>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  

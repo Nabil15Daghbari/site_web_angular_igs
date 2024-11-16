@@ -1,0 +1,36 @@
+.text-animation {
+    opacity: 0;
+    animation: fadeIn 4s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.igs{
+    font-weight: bold;
+    color: #34c38f; 
+}
+
+.highlight {
+    font-weight: bold;
+    color: #FFD700; /* couleur jaune */
+}
+
+.emphasis {
+    font-style: italic;
+
+}
+
+.img-bordered {
+    border-radius: 15px;
+    border: 1px solid #ddd; /* Couleur et épaisseur de la bordure */
+}
+
+

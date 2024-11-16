@@ -1,0 +1,106 @@
+<nav class="navbar navbar-expand-lg navigation fixed-top sticky" id="navbar">
+    <div class="container">
+        <a class="navbar-logo" >
+            <img src="assets/images/small/logo.jpg" alt="" height="30" class="logo logo-dark">
+            <img src="assets/images/small/logo.jpg" alt="" height="30" class="logo logo-light">
+        </a>
+
+        
+        <div class="collapse navbar-collapse" id="topnav-menu-content">
+            <ul class="navbar-nav ms-auto" id="topnav-menu">
+
+
+                <li class="nav-item dropdown" ngbDropdown>
+                    <a class="nav-link" data-toggle="dropdown" style="cursor: pointer;">
+                        About Us
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                        <li routerLink="/igs/a-propos"><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp;About</a></li>
+                        <li  routerLink="/igs/gouvernance" ><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp;Governance</a>
+                        </li>
+                        <li  routerLink="/igs/Collaborateurs"><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp;Collaborators</a>
+                        </li>
+                    </ul>
+                </li>  
+
+                <li class="nav-item dropdown" ngbDropdown>
+                    <a class="nav-link" data-toggle="dropdown" routerLink="/igs/Consulting"> Consulting </a>
+                    <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                        <li><a class="dropdown-item" style="cursor: pointer;" [routerLink]="['/igs/Environmental']" > &nbsp;&nbsp;Environmental Solutions </a></li>
+                        <li><a class="dropdown-item" style="cursor: pointer;" [routerLink]="['/igs/energy']" > &nbsp;&nbsp;Energy Solutions </a></li>
+                        <li><a class="dropdown-item" style="cursor: pointer;" [routerLink]="['/igs/rd']"> &nbsp;&nbsp;R&D </a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown" ngbDropdown>
+                    <a class="nav-link" data-toggle="dropdown" routerLink="/igs/rmd">RMD</a>
+                </li>   
+                <li class="nav-item dropdown" ngbDropdown >
+                    <a class="nav-link" data-toggle="dropdown" style="cursor: pointer;">
+                        Analytical Services
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                        <li ><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp;ISO</a></li>
+                        <li  routerLink="/igs/Gold" ><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp;Gold & PM Assaying</a>
+                        </li>
+                        <li  routerLink="/igs/testing"><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp; Assaying & Testing</a>
+                        </li>
+                        <li  routerLink="/igs/lab"><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp;Lab Auditing</a>
+                        </li>
+                    </ul>    
+                </li>  
+
+                <li class="nav-item dropdown" ngbDropdown>
+                    <a class="nav-link" data-toggle="dropdown" style="cursor: pointer;">
+                        Met Testing
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                        <li  routerLink="/igs/preparation"><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp;Sample Preparation</a></li>
+                        <li   routerLink="/igs/Communition"><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp;Communition Testing</a>
+                        </li>
+                        <li  routerLink="/igs/Gravity"><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp; Gravity Testing</a>
+                        </li>
+                        <li  routerLink="/igs/Gold_Testing"><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp;Gold Testing Capabilities</a>
+                        </li>
+                        <li  routerLink="/igs/Floatation"><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp;Floatation Testing Capabilities</a>
+                        </li>
+                        <li  routerLink="/igs/Hydromet"><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp;Hydromet Testing</a>
+                        </li>
+                        <li  routerLink="/igs/Separation"><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp;S/L Separation Testing</a>
+                        </li>
+                        <li  routerLink="/igs/Magnetic"><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp;Magnetic and Electrostatic Separation</a>
+                        </li>
+                    </ul>  
+                </li>  
+
+
+                <li class="nav-item dropdown" ngbDropdown>
+                    <a class="nav-link" data-toggle="dropdown" style="cursor: pointer;">
+                        Reference
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+                        <li  routerLink="/igs/projects" ><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp;Projects</a></li>
+                         <li  routerLink="/igs/clients"><a class="dropdown-item" style="cursor: pointer;">&nbsp;&nbsp; Clients</a></li>
+                    </ul>    
+                </li>  
+
+                <li class="nav-item dropdown" >
+                    <a class="nav-link"  routerLink="/igs/news" style="cursor: pointer;" >News</a>
+                </li> 
+    
+            </ul>
+            <div class="my-2 ms-lg-2">
+                <a href="javascript:void(0);" class="btn btn-outline-success w-xs"  routerLink="/account/login"> Login</a>
+            </div>
+            <div class="my-2 ms-lg-2">
+                <a href="javascript:void(0);" class="btn btn-outline-success w-xs">Sign in</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+

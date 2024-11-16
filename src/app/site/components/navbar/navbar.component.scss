@@ -1,0 +1,85 @@
+/* Styles pour la barre de navigation */
+.navbar {
+    background-color: #c7c7c738; /* Couleur de fond */
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1); /* Ombre */
+    padding: 0px 0; /* Espacement intérieur */
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Assurez-vous que la barre de navigation est au-dessus de tous les autres éléments */
+    background-color: #fff; /* Couleur de fond de la barre de navigation */
+}
+
+body {
+    padding-top: 70px; /* ou ajustez la valeur selon la hauteur de votre barre de navigation */
+}
+/* Logo */
+.navbar-logo {
+    display: inline-block;
+    margin-right: 20px; /* Espacement à droite */
+}
+
+/* Styles pour les liens de navigation */
+.navbar-nav .nav-item {
+    margin-right: 5px; /* Espacement entre les éléments */
+}
+
+.navbar-nav .nav-link {
+    color: #333333; /* Couleur du texte */
+    font-size: 16px; /* Taille de la police */
+    font-weight: 500; /* Graisse de la police */
+    transition: all 0.3s ease; /* Transition en douceur */
+    position: relative; /* Position relative pour la ligne bleue */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Couleur du texte au survol */
+}
+
+/* Boutons */
+.navbar-nav .btn {
+    margin-left: 15px; /* Espacement entre les boutons */
+}
+
+/* Styles pour les boutons de connexion */
+.btn-outline-success {
+    color: #28a745; /* Couleur du texte */
+    border-color: #28a745; /* Couleur de la bordure */
+    transition: all 0.3s ease; /* Transition en douceur */
+}
+
+.btn-outline-success:hover {
+    color: #ffffff; /* Couleur du texte au survol */
+    background-color: #28a745; /* Couleur de fond au survol */
+    border-color: #28a745; /* Couleur de la brdure au survol */
+}
+
+/* Styles pour les dropdowns */
+.dropdown-menu {
+    position: absolute; /* Position absolue pour afficher au-dessus de la ligne */
+    top: calc(100% + 2px); /* Décaler le dropdown en bas de l'élément parent */
+    left: 0; /* Aligner à gauche */
+    z-index: 1000; /* Assurer que le dropdown est au-dessus de tout */
+    margin-top: 0; /* Annuler la marge par défaut */
+    display: none; /* Cacher par défaut */
+}
+
+.navbar-nav .nav-item:hover .dropdown-menu {
+    display: block; /* Afficher le dropdown au survol du lien parent */
+}
+
+/* Ligne bleue au bas de la navbar */
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Largeur initiale de la ligne */
+    height: 2px; /* Épaisseur de la ligne */
+    background-color: #007bff; /* Couleur de la ligne */
+    transition: width 0.3s ease; /* Transition en douceur */
+    z-index: 999; /* Assurer que la ligne est au-dessus des dropdowns */
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 100%; /* Largeur de la ligne au survol */
+}

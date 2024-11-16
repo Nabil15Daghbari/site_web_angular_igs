@@ -1,0 +1,110 @@
+.btn-save {
+    margin-top: 0px;
+    background-image: linear-gradient(to right, #02508f, #065291, #0b5394, #0f5596, #135799, #0861a1, #006ca8, #0076ae, #008bb5, #009eb2, #00b0a7, #55bf99);
+    border: none;
+    color: white !important; /* Couleur du texte, à ajuster selon vos besoins */
+    padding: 8px 25px !important;
+    /* Couleur du texte, à ajuster selon vos besoins */
+  }
+
+
+  .btn-anuuler {
+    margin-top: 0px;
+    border: none;
+    padding: 8px 25px !important;
+    /* Couleur du texte, à ajuster selon vos besoins */
+  }
+
+  .modal-body {
+    height: auto !important;
+    border-radius: 8px; /* Rayon de bordure pour créer des coins arrondis */
+    max-height: 100vh !important;
+    overflow-y: auto;
+    border-block: .5px solid lightgray !important;
+    background-color: #f4f4f4!important;
+  }
+
+
+  .rectangular-container {
+    border: 2px solid #b8cee6; /* Couleur et épaisseur de la bordure */
+    border-radius: 8px; /* Rayon de bordure pour créer des coins arrondis */
+    padding: 10px; /* Espace intérieur entre le contenu et la bordure */
+  }
+  
+
+  .page-title {
+    font-size: 20px; /* Taille de la police */
+    font-weight: 600; /* Gras */
+    color: #024F90; /* Couleur du texte */
+    margin-bottom: 20px; /* Espacement en bas */
+    text-transform: uppercase; /* Mettre le texte en majuscules */
+    letter-spacing: 0.5px; /* Espacement entre les lettres */
+}
+
+.position-relative input {
+  border: 1px solid #006ca8 !important;; /* Vous pouvez personnaliser la couleur et l'épaisseur de la bordure selon vos préférences */
+    
+}
+
+.total span {
+  display: inline-block;
+  background: #fff;
+  padding: 0 1.2rem;
+  color: #333;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.total {
+  background: linear-gradient(to right, #02508f, #065291, #0b5394, #0f5596, #135799, #0861a1, #006ca8, #0076ae, #008bb5, #009eb2, #00b0a7, #55bf99);;
+  line-height: 1.0rem;
+  color: #fff;
+  border-radius: 3rem;
+  outline: 1px solid #05143f;
+  padding-left: 1.0rem;
+}
+.icon-container:hover .total {
+  background-color: #0da8e4;
+  outline: 1px solid #0da8e4;
+}
+.icon-container:hover .total span {
+  color:linear-gradient(to right, #02508f, #065291, #0b5394, #0f5596, #135799, #0861a1, #006ca8, #0076ae, #008bb5, #009eb2, #00b0a7, #55bf99);
+}
+
+.cart-area.d-n {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #05143f;
+}
+.icon-container:hover {
+  color: #0da8e4;
+}
+.icon-container:hover .total {
+  background-color: #0da8e4;
+  outline: 1px solid #0da8e4;
+}
+.icon-container:hover .total span {
+  color:#05143f;
+}
+
+.custom-icon {
+  width: 1.0rem;
+  height: 1.0rem;
+}
+
+
+
+
+
+
+
+
+

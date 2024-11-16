@@ -1,0 +1,132 @@
+<div class="account-pages my-5 pt-sm-5" *ngIf="!authResponse.mfaEnabled">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 col-xl-5">
+        <div class="card overflow-hidden">
+          <div class="card-body pt-0">
+            <div class="success-message-panel" *ngIf="message">
+              <div class="success-icon">&#10004;</div>
+              <div class="success-message">{{message}}</div>
+            </div>
+            <div class="danger-message-panel" *ngIf="messageError">
+              <div class="danger-icon">&#10008;</div>
+              <div class="danger-message">{{messageError}}</div>
+            </div>
+            <div class="p-2" >
+              <br><br>
+              <form class="needs-validation" name="signupForm" [formGroup]="signupForm" (ngSubmit)="onSubmit()"
+                novalidate>
+
+                <ngb-alert type="success" *ngIf="successmsg" [dismissible]="false">Registeration successfull.
+                </ngb-alert>
+
+                <ngb-alert type="danger" *ngIf="error" [dismissible]="false">{{ error }}</ngb-alert>
+
+                <div class="mb-3">
+                  <label for="username" class="form-label">Nom</label>
+                  <input type="text" formControlName="firstname" class="form-control" id="firstname" placeholder="Entrez votre nom"
+                  [class.is-invalid]="isControlInvalid('firstname')" [class.is-valid]="isControlValid('firstname')"
+                  [ngStyle]="{ 'border-color': isControlValid('firstname') && isControlTouched('firstname') ? '#259bed' : isControlInvalid('firstname') ? 'red' : '' }" />
+                  <div class="error-messages">
+                    <div *ngIf="signupForm.controls['firstname']?.errors?.required && signupForm.controls['firstname'].touched" 
+                         class="form-text text-danger text-danger" [ngClass]="'error'" style="font-weight: bold;">
+                         Nom est requise.
+                   </div>
+                  </div>
+                  
+                </div>
+
+                <div class="mb-3">
+                  <label for="lastname" class="form-label">Prénom</label>
+                  <input type="text" formControlName="lastname" class="form-control" id="lastname" placeholder="Entrez votre prenom"
+                  [class.is-invalid]="isControlInvalid('lastname')" [class.is-valid]="isControlValid('lastname')"
+                  [ngStyle]="{ 'border-color': isControlValid('lastname') && isControlTouched('lastname') ? '#259bed' : isControlInvalid('lastname') ? 'red' : '' }" />
+                  <div class="error-messages">
+                    <div *ngIf="signupForm.controls['lastname']?.errors?.required && signupForm.controls['lastname'].touched" 
+                        class="form-text text-danger text-danger" [ngClass]="'error'" style="font-weight: bold;">
+                        Prenom est requise. 
+                    </div>
+                  </div>       
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" formControlName="email" class="form-control" id="email" placeholder="Entrez votre adresse e-mail"
+                  [class.is-invalid]="isControlInvalid('email')" [class.is-valid]="isControlValid('email')"
+                  [ngStyle]="{ 'border-color': isControlValid('email') && isControlTouched('email') ? '#259bed' : isControlInvalid('email') ? 'red' : '' }" />
+                  <div class="error-messages">
+                    <div *ngIf="signupForm.controls['email']?.errors?.required && signupForm.controls['email'].touched" 
+                        class="form-text text-danger text-danger" [ngClass]="'error'" style="font-weight: bold;">
+                      Email est requise. 
+                   </div>
+                  </div>
+                 
+                  <div class="error-messages">
+                    <div *ngIf="signupForm.controls['email']?.errors?.email && signupForm.controls['email'].touched" 
+                    class="form-text text-danger text-danger" [ngClass]="'error'" style="font-weight: bold;">
+                      L'adresse e-mail doit être une adresse e-mail valide.
+                    </div>
+                  </div>
+                  
+                </div>
+
+                <div class="mb-3">
+                  <label for="password" class="form-label">Mot de passe</label>
+ 
+                  <input type="password" formControlName="password" class="form-control"  id="password" placeholder="Entrez votre mot de passe"
+                  [class.is-invalid]="isControlInvalid('password')" [class.is-valid]="isControlValid('password')"
+                  [ngStyle]="{ 'border-color': isControlValid('password') && isControlTouched('password') ? '#259bed' : isControlInvalid('password') ? 'red' : '' }" />
+                  <div class="error-messages">
+                    <div *ngIf="signupForm.controls['password']?.errors?.required && signupForm.controls['password'].touched" 
+                    class="form-text text-danger text-danger" [ngClass]="'error'" style="font-weight: bold;">
+                    Mot de passe est requise. 
+                  </div>
+                  </div>
+                 
+                </div>
+                <div class="mb-3 d-flex align-items-center"> 
+                  <h6 class="mr-3">Genre</h6>
+                  &nbsp;&nbsp;&nbsp;
+                  <label for="r1" class="mr-2">
+                    <input type="radio" id="r1" id="sexe" formControlName="sexe" [value]="'homme'">&nbsp;
+                    <span class="label-text">Homme</span>
+                  </label>
+                
+                  <label for="r2" class="mr-2">
+                    <input type="radio" id="r2" id="sexe"  formControlName="sexe" [value]="'femme'" >&nbsp;
+                    <span class="label-text">Femme</span>
+                  </label>
+                </div>
+
+
+                <div class="mt-4 d-grid">
+                  <button class="btn btn-primary"  type="submit" [disabled] ="signupForm.invalid">Inscription</button>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- end card -->
+
+        <div class="mt-5 text-center">
+          <p>Déjà un compte ? <a routerLink="/account/login" class="fw-medium text-primary">Connexion</a>
+          </p>
+        
+        </div>
+      </div> <!-- end col -->
+    </div>
+    <!-- end row -->
+  </div>
+  <!-- end container -->
+</div>
+
+
+
+
+
+
+
+
+
+
+

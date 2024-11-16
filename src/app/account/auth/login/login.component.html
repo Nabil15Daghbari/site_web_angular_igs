@@ -1,0 +1,83 @@
+<div class="account-pages my-5 pt-sm-5" *ngIf="!authResponse.mfaEnabled">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6 col-xl-5">
+        <div class="card overflow-hidden">
+          <div class="card-body pt-0">
+            <div class="danger-message-panel" *ngIf="message">
+              <div class="danger-icon">&#10008;</div>
+              <div class="danger-message">{{message}}</div>
+            </div>
+            <div class="p-2">
+              <br><br>
+              <form class="form-horizontal" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" formControlName="email" class="form-control" id="email"
+                    placeholder="Entrez votre adresse e-mail" [class.is-invalid]="isControlInvalid('email')"
+                    [class.is-valid]="isControlValid('email')"
+                    [ngStyle]="{ 'border-color': isControlValid('email') && isControlTouched('email') ? '#259bed' : isControlInvalid('email') ? 'red' : '' }" />
+                  <div class="error-messages">
+                    <div *ngIf="loginForm.controls['email']?.errors?.required && loginForm.controls['email'].touched"
+                      class="form-text text-danger text-danger" [ngClass]="'error'" style="font-weight: bold;">
+                      Email est requise.
+                    </div>
+                    <div *ngIf="loginForm.controls['email']?.errors?.email && loginForm.controls['email'].touched"
+                      class="form-text text-danger text-danger" [ngClass]="'error'" style="font-weight: bold;">
+                      L'adresse e-mail doit être une adresse e-mail valide.
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="mb-3">
+                  <label for="password" class="form-label">Mot de passe</label>
+
+                  <input type="password" formControlName="password" class="form-control" id="password"
+                    placeholder="Entrez votre mot de passe" [class.is-invalid]="isControlInvalid('password')"
+                    [class.is-valid]="isControlValid('password')"
+                    [ngStyle]="{ 'border-color': isControlValid('password') && isControlTouched('password') ? '#259bed' : isControlInvalid('password') ? 'red' : '' }" />
+                  <div class="error-messages">
+                    <div *ngIf="loginForm.controls['password']?.errors?.required && loginForm.controls['password'].touched"
+                      class="form-text text-danger text-danger" [ngClass]="'error'" style="font-weight: bold;">
+                      Mot de passe est requise.
+                    </div>
+                  </div>
+
+                </div>
+                <div class="mt-3 d-grid">
+                  <button class="btn btn-primary" type="submit"
+                    [disabled]="loginForm.invalid">Connexion</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+        <div class="mt-5 text-center">
+          <p>Vous n'avez pas de compte ? <a routerLink="/account/signup" class="fw-medium text-primary"> Inscrivez-vous
+              maintenant.</a> </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- end container -->
+</div>
+
+
+
+<div class="containers" *ngIf="authResponse.mfaEnabled">
+  <h2> Authentification à deux facteurs</h2>
+  <div class="form-group">
+    <label for="validationCode">Saisissez le code de validation à 6 chiffres généré par l'application</label>
+    <input class="form-control" type="text" id="validationCode" name="validationCode" required [(ngModel)]="otpCode"
+      placeholder="Entrer le code de validation à 6 chiffres">
+  </div>
+  <button type="button" (click)="verifyCode()" [class.button-disabled]="otpCode.length < 6" class="btn-save">Vérifier le
+    code</button>
+</div>
+
+
+<!-- end page -->

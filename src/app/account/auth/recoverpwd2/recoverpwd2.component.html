@@ -1,0 +1,94 @@
+<div class="email "  *ngIf="sendEmail" >
+  <div class="col-xl-4" >
+    <div class="card">
+        <div class="card-body">  
+            <div class="text-center">
+                <div class="mb-4">
+                    <img src="assets/images/mail.png" alt="" width="150">
+                </div>
+                <br>
+                <h4 class="card-title mb-4" >E-mail envoyé !</h4>
+                 <p> Nous avons envoyé un e-mail à votre adresse e-mail. 
+                  Suivez les étapes fournies dans l'e-mail pour mettre à 
+                  jour votre mot de passe ou sélectionnez Connexion si vous 
+                  ne souhaitez pas changer votre mot de passe à ce moment.</p>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn-save" routerLink='/account/login'>Login</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="account-pages my-5 pt-sm-5" *ngIf="resetPassword">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6 col-xl-5">
+          <div class="card overflow-hidden">
+            <div class="bg-soft bg-primary">
+              <div class="row">
+                <div class="col-7">
+                  <div class="text-primary p-4">
+                    <h5 class="text-primary"> Réinitialiser le mot de passe</h5>
+                  </div>
+                </div>
+                <div class="col-5 align-self-end">
+                  <img src="assets/images/profile-img.png" alt="" class="img-fluid">
+                </div>
+              </div>
+            </div>
+            <div class="card-body pt-0">
+              <div>
+                <a routerLink="/">
+                  <div class="avatar-md profile-user-wid mb-4">
+                    <span class="avatar-title rounded-circle bg-light">
+                      <img src="assets/images/bewise.png" alt="" class="rounded-circle" height="34">
+                    </span>
+                  </div>
+                </a>
+              </div>
+  
+              <form class="needs-validation" name="resetForm" [formGroup]="resetForm" (ngSubmit)="onSubmit()" novalidate>
+  
+                <ngb-alert type="danger" *ngIf="error" [dismissible]="false">{{ error }}</ngb-alert>
+  
+                <div class="mb-3">
+                  <label for="email">Email</label>
+  
+                  <input type="email" formControlName="email" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }" id="email" placeholder="Email" />
+  
+                  <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <button class="btn btn-save w-md" type="submit">Envoyer E-mail</button>
+                </div>
+              </form>
+  
+            </div> <!-- end card-body-->
+          </div>
+          <!-- end card -->
+          <div class="mt-5 text-center">
+            <p>Vous vous en souvenez ?  <a routerLink="/account/login" class="fw-medium text-primary"> Connectez-vous ici.</a> </p>
+           
+          </div>
+  
+        </div> <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+</div>
+  <!-- end page -->  
